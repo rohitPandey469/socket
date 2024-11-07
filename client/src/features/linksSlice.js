@@ -2,7 +2,7 @@ import axios from "axios";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { io } from "socket.io-client";
 
-export const API_URL = "http://localhost:5000";
+export const API_URL = "https://socket-ki5o.onrender.com";
 
 const socket = io(API_URL);
 
