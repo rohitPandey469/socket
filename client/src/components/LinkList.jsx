@@ -28,7 +28,7 @@ const styles = {
     borderRadius: "4px",
     backgroundColor: "#fff",
     boxShadow: "0 2px 4px rgba(0, 0, 0, 0.05)",
-    overflow: "hidden"
+    overflow: "hidden",
   },
   link: {
     cursor: "pointer",
@@ -55,6 +55,7 @@ const LinkList = () => {
     try {
       await axios.delete(`${API_URL}/api/links/${id}`);
       dispatch(removeLink(id)); // Optimistic update (optional)
+      dispatch(fetchLinks())
     } catch (error) {
       console.error("Failed to delete the link:", error);
     }
@@ -65,15 +66,18 @@ const LinkList = () => {
       <ul style={styles.list}>
         {links.map((link) => (
           <li key={link._id} style={styles.listItem}>
-            <span
-              onClick={() => {
-                window.open(link.url, "_blank");
-                handleDelete(link._id);
-              }}
+            <a
+              href={link.url}
+              target="_self"
               style={styles.link}
+              onClick={(e) => {
+                e.preventDefault();
+                handleDelete(link._id);
+                window.location.href = link.url;
+              }}
             >
               {link.url}
-            </span>
+            </a>
           </li>
         ))}
       </ul>

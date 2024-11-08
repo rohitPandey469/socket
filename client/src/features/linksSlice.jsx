@@ -3,6 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { io } from "socket.io-client";
 
 export const API_URL = "https://socket-ki5o.onrender.com";
+// export const API_URL = "http://localhost:5000"
 
 const socket = io(API_URL);
 
