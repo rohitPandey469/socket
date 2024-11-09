@@ -15,6 +15,10 @@ mongoose
 const seedData = [
   { url: "https://www.instagram.com/jessbeautylover" },
   { url: "https://www.instagram.com/sunshineskinclinic_official" },
+  { url: "https://www.instagram.com/noora2mb" },
+  { url: "https://www.instagram.com/ozsarisariph" },
+  { url: "https://www.instagram.com/beautybydani.ca" },
+  { url: "https://www.instagram.com/tanika.jaun" },
 ];
 
 // Function to insert seed data
