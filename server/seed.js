@@ -14,8 +14,8 @@ mongoose
 // Example data to seed the `Link` collection
 const seedData = [
   { url: "https://www.instagram.com/jessbeautylover" },
-  { url: "https://www.instagram.com/sunshineskinclinic_official" },
-  { url: "https://www.instagram.com/noora2mb" },
+  { url: "https://www.google.com/" }
+
 ];
 
 // Function to insert seed data
