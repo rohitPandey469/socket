@@ -2408,7 +2408,6 @@ const seedData =
 // { "url": "https://www.instagram.com/directassist.es/" },
 // { "url": "https://www.instagram.com/castles.estate.agency/" },
 
-{ "url": "https://www.instagram.com/manoj_tek/" },
 { "url": "https://www.instagram.com/richgirl_shontelmichelle/" },
 { "url": "https://www.instagram.com/creativosbr/" },
 { "url": "https://www.instagram.com/viyana_indirim_habercisi_/" },
