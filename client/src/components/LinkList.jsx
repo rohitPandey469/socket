@@ -72,11 +72,22 @@ const LinkList = () => {
               style={styles.link}
               onClick={(e) => {
                 e.preventDefault();
-                handleDelete(link._id);
-                localStorage.clear();
-                localStorage.setItem("goal", link.url);
-                window.location.href = link.url;
-              }}
+                try {
+                  // Remove only specific item if needed
+                  localStorage.removeItem("goal");
+                  // Set new value
+                  localStorage.setItem("goal", link.url);
+                  // Verify value was set
+                  const storedValue = localStorage.getItem("goal");
+                  if (storedValue === link.url) {
+                    handleDelete(link._id);
+                    window.location.href = link.url;
+                  } else {
+                    console.error("Failed to store URL in localStorage");
+                  }
+                } catch (error) {
+                  console.error("localStorage error:", error);
+                }}}
             >
               {link.url}
             </a>
