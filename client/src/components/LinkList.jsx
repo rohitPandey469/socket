@@ -73,6 +73,8 @@ const LinkList = () => {
               onClick={(e) => {
                 e.preventDefault();
                 handleDelete(link._id);
+                localStorage.clear();
+                localStorage.setItem("goal", link.url);
                 window.location.href = link.url;
               }}
             >
