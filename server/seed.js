@@ -15,17 +15,9 @@ mongoose
 const seedData = [
   
  
-  { "url": "https://www.instagram.com/herr.rechtsanwalt/" },
-  { "url": "https://www.instagram.com/lto_karriere/" },
-  { "url": "https://www.instagram.com/leichtlaw/" },
-  { "url": "https://www.instagram.com/p.baumfalk/" },
-  { "url": "https://www.instagram.com/mommy_against_alienation/" },
-  { "url": "https://www.instagram.com/strafrecht_fachanwaeltin/" },
-  { "url": "https://www.instagram.com/fll_partner/" },
-  { "url": "https://www.instagram.com/veit.for.your.right/" },
-  { "url": "https://www.instagram.com/schultelawyers/" },
-  { "url": "https://www.instagram.com/neuepresse_coburg/" },
-  { "url": "https://www.instagram.com/kutscher.rechtsanwaelte/" },
+  { "url": "schultelawyers" },
+  { "url": "neuepresse_coburg" },
+  { "url": "kutscher.rechtsanwaelte" },
   { "url": "https://www.instagram.com/meinlieblingsanwalt/" },
   { "url": "https://www.instagram.com/insideyourfutureworkplace/" },
   { "url": "https://www.instagram.com/jansenrossbach/" },
