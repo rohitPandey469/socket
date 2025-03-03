@@ -65,8 +65,8 @@ const LinkList = () => {
   const handleRunScript = async () => {
     try{
       setIsLoading(true);
-      // await axios.post(`${API_URL}/api/increment`);
-      await axios.post("http://localhost:5000/api/increment");
+      await axios.post(`${API_URL}/api/increment`);
+      // await axios.post("http://localhost:5000/api/increment");
     } catch (error) {
       console.error("Failed to run script:", error);
     } finally{
