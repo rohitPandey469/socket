@@ -22,6 +22,7 @@ mongoose.connect(process.env.MONGO_URI, {
 });
 
 const Link = require("./models/Link");
+const { default: axios } = require("axios");
 
 // Socket.io Client - Server Connection Code
 io.on("connection", (socket) => {
@@ -42,6 +43,16 @@ app.delete("/api/links/:id", async (req, res) => {
   await Link.findByIdAndDelete(id);
   io.emit("linkRemoved", id); //Notified all clients of the change
   res.sendStatus(200);
+});
+
+app.post("/api/increment", async (req, res) => {
+  try {
+    const response = await axios.post("http://localhost:5001/increment");
+    res.json(response.data);
+  } catch (error) {
+    console.error("Error calling Python server:", error.message);
+    res.status(500).json({ error: error.message });
+  }
 });
 
 server.listen(5000, () => console.log("Server running on port 5000"));

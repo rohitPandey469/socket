@@ -45,6 +45,7 @@ const styles = {
 const LinkList = () => {
   const dispatch = useDispatch();
   const links = useSelector((state) => state.links);
+  const [isLoading, setIsLoading] = React.useState(false);
 
   useEffect(() => {
     dispatch(fetchLinks()); // Fetch links on initial render
@@ -61,7 +62,24 @@ const LinkList = () => {
     }
   };
 
+  const handleRunScript = async () => {
+    try{
+      setIsLoading(true);
+      // await axios.post(`${API_URL}/api/increment`);
+      await axios.post("http://localhost:5000/api/increment");
+    } catch (error) {
+      console.error("Failed to run script:", error);
+    } finally{
+      setIsLoading(false);
+    }
+  }
+
+
   return (
+   <>
+    <div style={{width:"100vw", display:"flex", justifyContent:"center", alignItems:"center"}}>
+      <button style={{fontSize:"5rem", color:isLoading ? "red" : "white", border:"1px solid red", padding:"1rem 20rem", backgroundColor:isLoading ? "white" : "red", borderRadius:".5rem", cursor:"pointer"}} disabled={isLoading} onClick={handleRunScript}>+</button>
+    </div>
     <div style={styles.container}>
       <ul style={styles.list}>
         {links.map((link) => (
@@ -95,6 +113,7 @@ const LinkList = () => {
         ))}
       </ul>
     </div>
+   </>
   );
 };
 
