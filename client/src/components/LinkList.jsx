@@ -78,7 +78,7 @@ const LinkList = () => {
   return (
    <>
     <div style={{width:"100vw", display:"flex", justifyContent:"center", alignItems:"center"}}>
-      <button style={{fontSize:"5rem", color:isLoading ? "red" : "white", border:"1px solid red", padding:"1rem 20rem", backgroundColor:isLoading ? "white" : "red", borderRadius:".5rem", cursor:"pointer"}} disabled={isLoading} onClick={handleRunScript}>+</button>
+      <button style={{fontSize:"5rem", color:isLoading ? "red" : "white", border:"1px solid red", padding:"1rem 20rem", backgroundColor:isLoading ? "white" : "red", borderRadius:".5rem", cursor:"pointer"}} disabled={isLoading} onClick={handleRunScript}>+ - site3</button>
     </div>
     <div style={styles.container}>
       <ul style={styles.list}>
