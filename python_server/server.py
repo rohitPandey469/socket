@@ -26,7 +26,7 @@ credentials_dict = {
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
 creds = ServiceAccountCredentials.from_json_keyfile_dict(credentials_dict, scope)
 client = gspread.authorize(creds)
-sheet = client.open("DM TRACKING").sheet1 # Ensure correct sheet name
+sheet = client.open("DM TRACKING").worksheet("Mine") # Ensure correct sheet name
 
 @app.route("/increment", methods=["POST"])
 def increment():
