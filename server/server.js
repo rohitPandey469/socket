@@ -47,6 +47,7 @@ app.delete("/api/links/:id", async (req, res) => {
 
 app.post("/api/increment", async (req, res) => {
   try {
+    console.log("Incrementing count...");
     const response = await axios.post("https://py-server-1-c1uw.onrender.com/increment");
     res.json(response.data);
   } catch (error) {
