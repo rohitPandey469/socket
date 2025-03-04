@@ -47,7 +47,7 @@ app.delete("/api/links/:id", async (req, res) => {
 
 app.post("/api/increment", async (req, res) => {
   try {
-    const response = await axios.post("https://py-server-1-c1uw.onrender.com/increment");
+    const response = await axios.post("https://py-server-2.onrender.com/increment");
     res.json(response.data);
   } catch (error) {
     console.error("Error calling Python server:", error.message);
